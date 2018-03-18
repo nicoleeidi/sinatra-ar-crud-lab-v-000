@@ -24,11 +24,11 @@ get '/posts' do
 @posts= Post.all
 erb :index
 end
-get '/posts/:id'
+get '/posts/:id' do
 @post= Post.find_by_id(params[:id])
 erb :show
 end
-get '/posts/:id/edit'
+get '/posts/:id/edit' do
 @post= Post.find_by_id(params[:id])
 
 erb :edit
