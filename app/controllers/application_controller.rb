@@ -40,7 +40,7 @@ patch '/posts/:id' do  #updates a post
    @post.save
    erb :show
  end
-delete '/posts/:id/delete'
+delete '/posts/:id/delete' do
 erb :delete
 end
 
