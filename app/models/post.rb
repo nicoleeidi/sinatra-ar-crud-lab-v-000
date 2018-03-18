@@ -1,13 +1,5 @@
 #Placeholder for a model
 
 class Post < ActiveRecord::Base
-  @@all= []
-  def initialize(args)
-    @name=args[:name]
-    @content=args[:content]
-    @@all << self
-  end
-  def self.all
-    @@all
-  end
+#dont need any code here because methods builtinto Active Record
 end
