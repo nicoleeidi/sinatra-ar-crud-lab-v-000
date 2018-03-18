@@ -41,6 +41,7 @@ patch '/posts/:id' do  #updates a post
    erb :show
  end
 delete '/posts/:id/delete' do
+   @post = Post.find_by_id(params[:id])
 erb :delete
 end
 
