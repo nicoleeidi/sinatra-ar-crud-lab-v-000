@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
   erb :new
   end
   post '/posts'
-Post.create(params)
+@pos= Post.create(params)
 redirect to '/posts'
 
 end
@@ -25,11 +25,11 @@ get '/posts'
 erb :index
 end
 get '/posts/:id'
-Post.find_by_id(params[:id])
+@post= Post.find_by_id(params[:id])
 erb :show
 end
 get '/posts/:id/edit'
-Post.find_by_id(params[:id])
+@post= Post.find_by_id(params[:id])
 
 erb :edit
 end
